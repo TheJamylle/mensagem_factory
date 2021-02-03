@@ -12,9 +12,13 @@ import java.util.function.Function;
  * @author Jamylle
  */
 class MensagemEmail extends AbstractMensagem{
-    public MensagemEmail(Function<Conteudo, Object> obtemMsg, String msg) {
-        super(obtemMsg, msg);
+    public MensagemEmail(String msg) {
+        super(msg);
     }
     
-    
+    @Override
+    public void enviar() {
+        System.out.println("Mensagem enviada por Email");
+        System.out.println(msg);
+    }
 }

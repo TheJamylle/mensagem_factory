@@ -5,10 +5,20 @@
  */
 package com.jamylle.mensagem_factory;
 
+import java.util.function.Function;
+
 /**
  *
  * @author Jamylle
  */
 class MensagemNotificacao extends AbstractMensagem {
+     public MensagemNotificacao(String msg) {
+        super(msg);
+    }
     
+    @Override
+    public void enviar() {
+        System.out.println("Mensagem enviada por Notificação");
+        System.out.println(msg);
+    }
 }

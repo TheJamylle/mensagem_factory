@@ -10,11 +10,9 @@ import java.util.function.Function;
 
 public class AbstractMensagem implements Mensagem {
     String msg;
-    private Function<Conteudo, Object> obtemMsg;
     
-    public AbstractMensagem(Function<Conteudo, Object> obtemMsg, String msg) {
+    public AbstractMensagem(String msg) {
         this.msg = msg;
-        this.obtemMsg = obtemMsg;
     }
 
     @Override

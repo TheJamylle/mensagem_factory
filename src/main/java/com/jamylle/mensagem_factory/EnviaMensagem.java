@@ -12,7 +12,5 @@ import java.util.function.Function;
  * @author Jamylle
  */
 public interface EnviaMensagem {
-    public void envia(String msg);
-    public void newMensagem(String msg);
-    void addMensagem(Function<Conteudo,Object> obtemMsg, String msg);
+    public Mensagem envia(String msg);
 }

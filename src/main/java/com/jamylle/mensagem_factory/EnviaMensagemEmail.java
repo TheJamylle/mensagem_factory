@@ -11,19 +11,8 @@ import java.util.function.Function;
 public class EnviaMensagemEmail extends AbstractEnviaMensagem {
 
     @Override
-    public void envia(String msg) {
-        System.out.println("Enviando msg por Email");
-    }
-
-    @Override
-    public Mensagem<MensagemEmail> newMensagem(String msg) {
-         Mensagem<MensagemEmail> me = new Mensagem<MensagemEmail>();
-         
-    }
-
-    @Override
-    public void addMensagem(Function<Conteudo, Object> obtemMsg, String msg) {
-        addMensagem(new MensagemEmail(obtemMsg,msg));
+    public Mensagem envia(String msg) {
+        return new MensagemEmail(msg);
     }
     
 }
